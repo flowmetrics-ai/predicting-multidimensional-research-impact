@@ -1,0 +1,61 @@
+@prefix flow: <http://example.org/flowmetrics#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+flow:topic_15 a flow:ResearchTopic ;
+    rdfs:label "semantics" .
+
+flow:topic_131 a flow:ResearchTopic ;
+    rdfs:label "language model" .
+
+flow:pair_15_131 a flow:TopicPair ;
+    flow:hasTopic flow:topic_15, flow:topic_131 ;
+    flow:hasSharedConcept "language model" ;
+
+    flow:hasReachImpact [
+        flow:platform "Twitter" ;
+        flow:score 0.1321
+    ], [
+        flow:platform "Facebook" ;
+        flow:score 0.0972
+    ], [
+        flow:platform "Wikipedia" ;
+        flow:score 0.1772
+    ] ;
+
+    flow:hasEngagementImpact [
+        flow:platform "Mendeley" ;
+        flow:score 0.0
+    ], [
+        flow:platform "Videos" ;
+        flow:score 0.1667
+    ], [
+        flow:platform "Blogs" ;
+        flow:score 0.0
+    ], [
+        flow:platform "Reddit" ;
+        flow:score 0.0545
+    ] ;
+
+    flow:hasFeedbackImpact [
+        flow:platform "Expert" ;
+        flow:score 0.0
+    ], [
+        flow:platform "Peers" ;
+        flow:score 0.0
+    ] ;
+
+    flow:hasInfluenceImpact [
+        flow:platform "Citation_crossref" ;
+        flow:score 0.0912
+    ], [
+        flow:platform "News" ;
+        flow:score 0.0
+    ] ;
+
+    flow:hasOutcomeImpact [
+        flow:platform "Policy" ;
+        flow:score 0.0
+    ], [
+        flow:platform "Patents" ;
+        flow:score 0.0561
+    ]

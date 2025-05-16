@@ -24,7 +24,7 @@ Large Language Models (LLMs) are prompted using structured evidence from this gr
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```bash
 predicting-multidimensional-research-impact/
@@ -39,3 +39,17 @@ predicting-multidimensional-research-impact/
 │   └── utils.py
 ├── requirements.txt
 └── README.md
+```
+
+
+## Installation
+
+We recommend using a virtual environment to avoid dependency conflicts:
+
+```bash
+# Create and activate a virtual environment
+$ virtualenv venv -p python3
+$ source venv/bin/activate
+
+# Install dependencies
+$ pip install -r requirements.txt

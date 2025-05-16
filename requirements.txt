@@ -1,0 +1,22 @@
+# Core scientific libraries
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+seaborn
+plotly
+
+# NLP
+nltk
+transformers
+cso-classifier
+
+# Graph and visualisation
+networkx
+pyvis
+
+# LangChain and LLM interfaces
+langchain
+langchain-anthropic
+langchain-mistralai

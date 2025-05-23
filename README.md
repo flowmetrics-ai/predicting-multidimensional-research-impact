@@ -47,8 +47,8 @@ predicting-multidimensional-research-impact/
 We recommend using a virtual environment to avoid dependency conflicts:
 
 ```bash
-# Create and activate a virtual environment
-$ virtualenv venv -p python3
+# Create and activate a virtual environment with Python 3.8
+$ virtualenv venv -p python3.8
 $ source venv/bin/activate
 
 # Install dependencies

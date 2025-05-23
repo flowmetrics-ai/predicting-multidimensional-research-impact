@@ -10,13 +10,15 @@ plotly
 # NLP
 nltk
 transformers
-cso-classifier
+cso-classifier # https://github.com/angelosalatino/cso-classifier
 
 # Graph and visualisation
 networkx
+rdflib
 pyvis
 
 # LangChain and LLM interfaces
 langchain
 langchain-anthropic
 langchain-mistralai
+langchain-community

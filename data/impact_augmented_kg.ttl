@@ -1,5 +1,6 @@
 @prefix flow: <http://example.org/flowmetrics#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 flow:pair_0_1 a flow:TopicPair ;
@@ -19,10 +20,10 @@ flow:pair_0_1 a flow:TopicPair ;
             flow:score "0.14096521945183116"^^xsd:float ],
         [ flow:platform "News"^^xsd:string ;
             flow:score "0.0"^^xsd:float ] ;
-    flow:hasOutcomeImpact [ flow:platform "Patents"^^xsd:string ;
-            flow:score "0.07159904534606205"^^xsd:float ],
-        [ flow:platform "Policy"^^xsd:string ;
-            flow:score "0.0"^^xsd:float ] ;
+    flow:hasOutcomeImpact [ flow:platform "Policy"^^xsd:string ;
+            flow:score "0.0"^^xsd:float ],
+        [ flow:platform "Patents"^^xsd:string ;
+            flow:score "0.07159904534606205"^^xsd:float ] ;
     flow:hasReachImpact [ flow:platform "Wikipedia"^^xsd:string ;
             flow:score "0.2784810126582279"^^xsd:float ],
         [ flow:platform "Facebook"^^xsd:string ;
@@ -2412,12 +2413,12 @@ flow:pair_11_111 a flow:TopicPair ;
             flow:score "0.0"^^xsd:float ],
         [ flow:platform "Patents"^^xsd:string ;
             flow:score "0.03818615751789976"^^xsd:float ] ;
-    flow:hasReachImpact [ flow:platform "Wikipedia"^^xsd:string ;
-            flow:score "0.04430379746835443"^^xsd:float ],
-        [ flow:platform "Facebook"^^xsd:string ;
+    flow:hasReachImpact [ flow:platform "Facebook"^^xsd:string ;
             flow:score "0.09722222222222222"^^xsd:float ],
         [ flow:platform "Twitter"^^xsd:string ;
-            flow:score "0.023919043238270467"^^xsd:float ] ;
+            flow:score "0.023919043238270467"^^xsd:float ],
+        [ flow:platform "Wikipedia"^^xsd:string ;
+            flow:score "0.04430379746835443"^^xsd:float ] ;
     flow:hasSharedConcept "estimation method"^^xsd:string ;
     flow:hasTopic flow:topic_11,
         flow:topic_111 .
@@ -24116,13 +24117,13 @@ flow:pair_9_67 a flow:TopicPair ;
         flow:topic_9 .
 
 flow:pair_9_74 a flow:TopicPair ;
-    flow:hasEngagementImpact [ flow:platform "Reddit"^^xsd:string ;
-            flow:score "0.09090909090909091"^^xsd:float ],
-        [ flow:platform "Blogs"^^xsd:string ;
-            flow:score "0.0"^^xsd:float ],
-        [ flow:platform "Mendeley"^^xsd:string ;
+    flow:hasEngagementImpact [ flow:platform "Mendeley"^^xsd:string ;
             flow:score "0.0"^^xsd:float ],
         [ flow:platform "Videos"^^xsd:string ;
+            flow:score "0.0"^^xsd:float ],
+        [ flow:platform "Reddit"^^xsd:string ;
+            flow:score "0.09090909090909091"^^xsd:float ],
+        [ flow:platform "Blogs"^^xsd:string ;
             flow:score "0.0"^^xsd:float ] ;
     flow:hasFeedbackImpact [ flow:platform "Expert"^^xsd:string ;
             flow:score "0.0"^^xsd:float ],
@@ -24179,471 +24180,627 @@ flow:pair_9_78 a flow:TopicPair ;
     flow:hasTopic flow:topic_78,
         flow:topic_9 .
 
-flow:topic_115 a flow:ResearchTopic ;
+flow:topic_115 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "synthetic data"^^xsd:string .
 
-flow:topic_30 a flow:ResearchTopic ;
+flow:topic_30 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "backpropagation algorithm"^^xsd:string .
 
-flow:topic_73 a flow:ResearchTopic ;
+flow:topic_73 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "random access memory"^^xsd:string .
 
-flow:topic_104 a flow:ResearchTopic ;
+flow:topic_104 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "privacy"^^xsd:string .
 
-flow:topic_119 a flow:ResearchTopic ;
+flow:topic_119 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "mutual informations"^^xsd:string .
 
-flow:topic_120 a flow:ResearchTopic ;
+flow:topic_120 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "sparse approximations"^^xsd:string .
 
-flow:topic_129 a flow:ResearchTopic ;
+flow:topic_129 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "tracking method"^^xsd:string .
 
-flow:topic_156 a flow:ResearchTopic ;
+flow:topic_156 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "wavelet"^^xsd:string .
 
-flow:topic_22 a flow:ResearchTopic ;
+flow:topic_22 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "optimal solutions"^^xsd:string .
 
-flow:topic_42 a flow:ResearchTopic ;
+flow:topic_42 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "user query"^^xsd:string .
 
-flow:topic_78 a flow:ResearchTopic ;
+flow:topic_78 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "anomaly detection"^^xsd:string .
 
-flow:topic_81 a flow:ResearchTopic ;
+flow:topic_81 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "numerical experiments"^^xsd:string .
 
-flow:topic_103 a flow:ResearchTopic ;
+flow:topic_103 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "argumentation"^^xsd:string .
 
-flow:topic_122 a flow:ResearchTopic ;
+flow:topic_122 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "cache"^^xsd:string .
 
-flow:topic_134 a flow:ResearchTopic ;
+flow:topic_134 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "superresolution"^^xsd:string .
 
-flow:topic_144 a flow:ResearchTopic ;
+flow:topic_144 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "human computer interaction"^^xsd:string .
 
-flow:topic_155 a flow:ResearchTopic ;
+flow:topic_155 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "embedded systems"^^xsd:string .
 
-flow:topic_72 a flow:ResearchTopic ;
+flow:topic_72 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "web content"^^xsd:string .
 
-flow:topic_82 a flow:ResearchTopic ;
+flow:topic_82 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "image classification"^^xsd:string .
 
-flow:topic_86 a flow:ResearchTopic ;
+flow:topic_86 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "wireless"^^xsd:string .
 
-flow:topic_89 a flow:ResearchTopic ;
+flow:topic_89 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "graph-based"^^xsd:string .
 
-flow:topic_92 a flow:ResearchTopic ;
+flow:topic_92 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "sentiment analysis"^^xsd:string .
 
-flow:topic_95 a flow:ResearchTopic ;
+flow:topic_95 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "routing scheme"^^xsd:string .
 
-flow:topic_109 a flow:ResearchTopic ;
+flow:topic_109 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "speech signals"^^xsd:string .
 
-flow:topic_123 a flow:ResearchTopic ;
+flow:topic_123 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "computer games"^^xsd:string .
 
-flow:topic_151 a flow:ResearchTopic ;
+flow:topic_151 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "systems design"^^xsd:string .
 
-flow:topic_2 a flow:ResearchTopic ;
+flow:topic_2 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "matching algorithm"^^xsd:string .
 
-flow:topic_68 a flow:ResearchTopic ;
+flow:topic_68 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "first order logic"^^xsd:string .
 
-flow:topic_70 a flow:ResearchTopic ;
+flow:topic_70 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "knowledge base"^^xsd:string .
 
-flow:topic_75 a flow:ResearchTopic ;
+flow:topic_75 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "computer hardware"^^xsd:string .
 
-flow:topic_88 a flow:ResearchTopic ;
+flow:topic_88 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "descriptors"^^xsd:string .
 
-flow:topic_105 a flow:ResearchTopic ;
+flow:topic_105 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "fitness functions"^^xsd:string .
 
-flow:topic_116 a flow:ResearchTopic ;
+flow:topic_116 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "feature extraction"^^xsd:string .
 
-flow:topic_12 a flow:ResearchTopic ;
+flow:topic_12 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "recommendation"^^xsd:string .
 
-flow:topic_136 a flow:ResearchTopic ;
+flow:topic_136 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "libraries"^^xsd:string .
 
-flow:topic_141 a flow:ResearchTopic ;
+flow:topic_141 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "correlation coefficient"^^xsd:string .
 
-flow:topic_149 a flow:ResearchTopic ;
+flow:topic_149 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "haptic systems"^^xsd:string .
 
-flow:topic_46 a flow:ResearchTopic ;
+flow:topic_46 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "image segmentation"^^xsd:string .
 
-flow:topic_6 a flow:ResearchTopic ;
+flow:topic_6 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "approximation algorithms"^^xsd:string .
 
-flow:topic_60 a flow:ResearchTopic ;
+flow:topic_60 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "value functions"^^xsd:string .
 
-flow:topic_61 a flow:ResearchTopic ;
+flow:topic_61 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "verification"^^xsd:string .
 
-flow:topic_130 a flow:ResearchTopic ;
+flow:topic_130 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "social networks"^^xsd:string .
 
-flow:topic_148 a flow:ResearchTopic ;
+flow:topic_148 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "weighted graph"^^xsd:string .
 
-flow:topic_152 a flow:ResearchTopic ;
+flow:topic_152 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "medical images"^^xsd:string .
 
-flow:topic_34 a flow:ResearchTopic ;
+flow:topic_34 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "automation"^^xsd:string .
 
-flow:topic_36 a flow:ResearchTopic ;
+flow:topic_36 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "syntactic structure"^^xsd:string .
 
-flow:topic_57 a flow:ResearchTopic ;
+flow:topic_57 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "state space"^^xsd:string .
 
-flow:topic_64 a flow:ResearchTopic ;
+flow:topic_64 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "software frameworks"^^xsd:string .
 
-flow:topic_84 a flow:ResearchTopic ;
+flow:topic_84 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "k-nearest neighbors"^^xsd:string .
 
-flow:topic_85 a flow:ResearchTopic ;
+flow:topic_85 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "deterministic"^^xsd:string .
 
-flow:topic_90 a flow:ResearchTopic ;
+flow:topic_90 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "image processing"^^xsd:string .
 
-flow:topic_96 a flow:ResearchTopic ;
+flow:topic_96 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "object appearance"^^xsd:string .
 
-flow:topic_99 a flow:ResearchTopic ;
+flow:topic_99 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "regularization"^^xsd:string .
 
-flow:topic_106 a flow:ResearchTopic ;
+flow:topic_106 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "question answering"^^xsd:string .
 
-flow:topic_110 a flow:ResearchTopic ;
+flow:topic_110 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "geometry"^^xsd:string .
 
-flow:topic_118 a flow:ResearchTopic ;
+flow:topic_118 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "natural language processing"^^xsd:string .
 
-flow:topic_127 a flow:ResearchTopic ;
+flow:topic_127 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "virtual environments"^^xsd:string .
 
-flow:topic_132 a flow:ResearchTopic ;
+flow:topic_132 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "decision tables"^^xsd:string .
 
-flow:topic_133 a flow:ResearchTopic ;
+flow:topic_133 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "factorization"^^xsd:string .
 
-flow:topic_140 a flow:ResearchTopic ;
+flow:topic_140 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "user experience"^^xsd:string .
 
-flow:topic_154 a flow:ResearchTopic ;
+flow:topic_154 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "autonomous driving"^^xsd:string .
 
-flow:topic_52 a flow:ResearchTopic ;
+flow:topic_52 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "syntactics"^^xsd:string .
 
-flow:topic_65 a flow:ResearchTopic ;
+flow:topic_65 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "programming languages"^^xsd:string .
 
-flow:topic_77 a flow:ResearchTopic ;
+flow:topic_77 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "latent variable"^^xsd:string .
 
-flow:topic_98 a flow:ResearchTopic ;
+flow:topic_98 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "machine translations"^^xsd:string .
 
-flow:topic_101 a flow:ResearchTopic ;
+flow:topic_101 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "user preferences"^^xsd:string .
 
-flow:topic_112 a flow:ResearchTopic ;
+flow:topic_112 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "document images"^^xsd:string .
 
-flow:topic_117 a flow:ResearchTopic ;
+flow:topic_117 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "principal component analysis (pca)"^^xsd:string .
 
-flow:topic_13 a flow:ResearchTopic ;
+flow:topic_13 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "internet"^^xsd:string .
 
-flow:topic_135 a flow:ResearchTopic ;
+flow:topic_135 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "education"^^xsd:string .
 
-flow:topic_139 a flow:ResearchTopic ;
+flow:topic_139 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "generative adversarial networks"^^xsd:string .
 
-flow:topic_143 a flow:ResearchTopic ;
+flow:topic_143 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "evolutionary algorithms"^^xsd:string .
 
-flow:topic_29 a flow:ResearchTopic ;
+flow:topic_29 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "neural networks"^^xsd:string .
 
-flow:topic_39 a flow:ResearchTopic ;
+flow:topic_39 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "genetic algorithms"^^xsd:string .
 
-flow:topic_43 a flow:ResearchTopic ;
+flow:topic_43 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "markov decision processes"^^xsd:string .
 
-flow:topic_8 a flow:ResearchTopic ;
+flow:topic_8 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "evolutionary process"^^xsd:string .
 
-flow:topic_80 a flow:ResearchTopic ;
+flow:topic_80 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "biometrics"^^xsd:string .
 
-flow:topic_126 a flow:ResearchTopic ;
+flow:topic_126 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "mobile devices"^^xsd:string .
 
-flow:topic_142 a flow:ResearchTopic ;
+flow:topic_142 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "linguistics"^^xsd:string .
 
-flow:topic_153 a flow:ResearchTopic ;
+flow:topic_153 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "virtual reality"^^xsd:string .
 
-flow:topic_50 a flow:ResearchTopic ;
+flow:topic_50 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "robots"^^xsd:string .
 
-flow:topic_62 a flow:ResearchTopic ;
+flow:topic_62 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "svm"^^xsd:string .
 
-flow:topic_71 a flow:ResearchTopic ;
+flow:topic_71 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "vehicles"^^xsd:string .
 
-flow:topic_93 a flow:ResearchTopic ;
+flow:topic_93 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "source codes"^^xsd:string .
 
-flow:topic_102 a flow:ResearchTopic ;
+flow:topic_102 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "prediction modes"^^xsd:string .
 
-flow:topic_128 a flow:ResearchTopic ;
+flow:topic_128 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "facial expression"^^xsd:string .
 
-flow:topic_145 a flow:ResearchTopic ;
+flow:topic_145 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "human emotion"^^xsd:string .
 
-flow:topic_19 a flow:ResearchTopic ;
+flow:topic_19 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "clustering algorithms"^^xsd:string .
 
-flow:topic_48 a flow:ResearchTopic ;
+flow:topic_48 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "search engines"^^xsd:string .
 
-flow:topic_53 a flow:ResearchTopic ;
+flow:topic_53 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "dialogue"^^xsd:string .
 
-flow:topic_54 a flow:ResearchTopic ;
+flow:topic_54 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "part of speech"^^xsd:string .
 
-flow:topic_69 a flow:ResearchTopic ;
+flow:topic_69 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "search process"^^xsd:string .
 
-flow:topic_79 a flow:ResearchTopic ;
+flow:topic_79 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "association rules"^^xsd:string .
 
-flow:topic_87 a flow:ResearchTopic ;
+flow:topic_87 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "facial images"^^xsd:string .
 
-flow:topic_100 a flow:ResearchTopic ;
+flow:topic_100 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "smart phones"^^xsd:string .
 
-flow:topic_147 a flow:ResearchTopic ;
+flow:topic_147 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "object detection"^^xsd:string .
 
-flow:topic_150 a flow:ResearchTopic ;
+flow:topic_150 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "audio"^^xsd:string .
 
-flow:topic_18 a flow:ResearchTopic ;
+flow:topic_18 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "topology"^^xsd:string .
 
-flow:topic_37 a flow:ResearchTopic ;
+flow:topic_37 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "software"^^xsd:string .
 
-flow:topic_44 a flow:ResearchTopic ;
+flow:topic_44 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "intelligent agents"^^xsd:string .
 
-flow:topic_55 a flow:ResearchTopic ;
+flow:topic_55 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "integrated data"^^xsd:string .
 
-flow:topic_76 a flow:ResearchTopic ;
+flow:topic_76 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "segmentation methods"^^xsd:string .
 
-flow:topic_131 a flow:ResearchTopic ;
+flow:topic_131 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "language model"^^xsd:string .
 
-flow:topic_14 a flow:ResearchTopic ;
+flow:topic_14 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "communication"^^xsd:string .
 
-flow:topic_28 a flow:ResearchTopic ;
+flow:topic_28 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "natural languages"^^xsd:string .
 
-flow:topic_1 a flow:ResearchTopic ;
+flow:topic_1 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "combinatorial problems"^^xsd:string .
 
-flow:topic_111 a flow:ResearchTopic ;
+flow:topic_111 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "image features"^^xsd:string .
 
-flow:topic_124 a flow:ResearchTopic ;
+flow:topic_124 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "information retrieval"^^xsd:string .
 
-flow:topic_125 a flow:ResearchTopic ;
+flow:topic_125 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "virtual spaces"^^xsd:string .
 
-flow:topic_146 a flow:ResearchTopic ;
+flow:topic_146 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "representation learning"^^xsd:string .
 
-flow:topic_21 a flow:ResearchTopic ;
+flow:topic_21 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "directed graphs"^^xsd:string .
 
-flow:topic_27 a flow:ResearchTopic ;
+flow:topic_27 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "classification"^^xsd:string .
 
-flow:topic_35 a flow:ResearchTopic ;
+flow:topic_35 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "machine learning"^^xsd:string .
 
-flow:topic_41 a flow:ResearchTopic ;
+flow:topic_41 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "stochastic"^^xsd:string .
 
-flow:topic_94 a flow:ResearchTopic ;
+flow:topic_94 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "point cloud"^^xsd:string .
 
-flow:topic_114 a flow:ResearchTopic ;
+flow:topic_114 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "engineering"^^xsd:string .
 
-flow:topic_58 a flow:ResearchTopic ;
+flow:topic_58 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "domain knowledge"^^xsd:string .
 
-flow:topic_91 a flow:ResearchTopic ;
+flow:topic_91 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "text document"^^xsd:string .
 
-flow:topic_113 a flow:ResearchTopic ;
+flow:topic_113 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "optimization problems"^^xsd:string .
 
-flow:topic_17 a flow:ResearchTopic ;
+flow:topic_17 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "color images"^^xsd:string .
 
-flow:topic_3 a flow:ResearchTopic ;
+flow:topic_3 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "artificial intelligence"^^xsd:string .
 
-flow:topic_4 a flow:ResearchTopic ;
+flow:topic_4 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "probability"^^xsd:string .
 
-flow:topic_47 a flow:ResearchTopic ;
+flow:topic_47 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "reinforcement learning"^^xsd:string .
 
-flow:topic_51 a flow:ResearchTopic ;
+flow:topic_51 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "bayesian methods"^^xsd:string .
 
-flow:topic_7 a flow:ResearchTopic ;
+flow:topic_7 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "architecture designs"^^xsd:string .
 
-flow:topic_0 a flow:ResearchTopic ;
+flow:topic_0 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "optimization"^^xsd:string .
 
-flow:topic_108 a flow:ResearchTopic ;
+flow:topic_108 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "deep learning"^^xsd:string .
 
-flow:topic_24 a flow:ResearchTopic ;
+flow:topic_24 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "gaussians"^^xsd:string .
 
-flow:topic_56 a flow:ResearchTopic ;
+flow:topic_56 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "visualization"^^xsd:string .
 
-flow:topic_63 a flow:ResearchTopic ;
+flow:topic_63 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "online learning"^^xsd:string .
 
-flow:topic_67 a flow:ResearchTopic ;
+flow:topic_67 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "classification models"^^xsd:string .
 
-flow:topic_83 a flow:ResearchTopic ;
+flow:topic_83 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "reconstruction"^^xsd:string .
 
-flow:topic_107 a flow:ResearchTopic ;
+flow:topic_107 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "video streams"^^xsd:string .
 
-flow:topic_16 a flow:ResearchTopic ;
+flow:topic_16 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "network architecture"^^xsd:string .
 
-flow:topic_74 a flow:ResearchTopic ;
+flow:topic_74 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "computer vision"^^xsd:string .
 
-flow:topic_9 a flow:ResearchTopic ;
+flow:topic_9 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "detection algorithm"^^xsd:string .
 
-flow:topic_97 a flow:ResearchTopic ;
+flow:topic_97 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "digital image"^^xsd:string .
 
-flow:topic_11 a flow:ResearchTopic ;
+flow:topic_11 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "correlation analysis"^^xsd:string .
 
-flow:topic_138 a flow:ResearchTopic ;
+flow:topic_138 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "convolutional neural networks"^^xsd:string .
 
-flow:topic_26 a flow:ResearchTopic ;
+flow:topic_26 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "classifiers"^^xsd:string .
 
-flow:topic_38 a flow:ResearchTopic ;
+flow:topic_38 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "viewpoint"^^xsd:string .
 
-flow:topic_49 a flow:ResearchTopic ;
+flow:topic_49 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "reasoning"^^xsd:string .
 
-flow:topic_20 a flow:ResearchTopic ;
+flow:topic_20 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "user information"^^xsd:string .
 
-flow:topic_23 a flow:ResearchTopic ;
+flow:topic_23 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "sensors"^^xsd:string .
 
-flow:topic_25 a flow:ResearchTopic ;
+flow:topic_25 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "inference"^^xsd:string .
 
-flow:topic_32 a flow:ResearchTopic ;
+flow:topic_32 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "database systems"^^xsd:string .
 
-flow:topic_45 a flow:ResearchTopic ;
+flow:topic_45 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "estimation method"^^xsd:string .
 
-flow:topic_15 a flow:ResearchTopic ;
+flow:topic_15 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "semantics"^^xsd:string .
 
-flow:topic_40 a flow:ResearchTopic ;
+flow:topic_40 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "classification methods"^^xsd:string .
 
-flow:topic_59 a flow:ResearchTopic ;
+flow:topic_59 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "hierarchical model"^^xsd:string .
 
-flow:topic_66 a flow:ResearchTopic ;
+flow:topic_66 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "reference image"^^xsd:string .
 
-flow:topic_10 a flow:ResearchTopic ;
+flow:topic_10 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "adaptive algorithms"^^xsd:string .
 
-flow:topic_121 a flow:ResearchTopic ;
+flow:topic_121 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "http"^^xsd:string .
 
-flow:topic_31 a flow:ResearchTopic ;
+flow:topic_31 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "computational efficiency"^^xsd:string .
 
-flow:topic_5 a flow:ResearchTopic ;
+flow:topic_5 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "genetic selection"^^xsd:string .
 
-flow:topic_137 a flow:ResearchTopic ;
+flow:topic_137 a flow:ResearchTopic,
+        skos:Concept ;
     rdfs:label "encoder-decoder"^^xsd:string .
 

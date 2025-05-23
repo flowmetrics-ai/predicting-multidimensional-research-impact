@@ -1,0 +1,98 @@
+@prefix flow: <http://example.org/flowmetrics#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cso: <http://cso.kmi.open.ac.uk/schema/cso#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://example.org/flowmetrics#hasEngagementImpact
+flow:hasEngagementImpact rdf:type owl:AnnotationProperty ;
+    rdfs:label "hasEngagementImpact"@en ;    # Human-readable label
+    rdfs:comment "Defines the Engagement impact as one of the five semantic stages of impact."@en ; # Description
+    rdfs:domain flow:TopicPair ;      
+    rdfs:range skos:Concept .  
+
+
+###  http://example.org/flowmetrics#hasFeedbackImpact
+flow:hasFeedbackImpact rdf:type owl:AnnotationProperty ;
+    rdfs:label "hasFeedbackImpact"@en ;    # Human-readable label
+    rdfs:comment "Defines the Feedback impact as one of the five semantic stages of impact."@en ; # Description
+    rdfs:domain flow:TopicPair .
+
+
+###  http://example.org/flowmetrics#hasInfluenceImpact
+flow:hasInfluenceImpact rdf:type owl:AnnotationProperty ;
+    rdfs:label "hasInfluenceImpact"@en ;    # Human-readable label
+    rdfs:comment "Defines the Influence impact as one of the five semantic stages of impact."@en ; # Description
+    rdfs:domain flow:TopicPair .
+
+
+###  http://example.org/flowmetrics#hasOutcomeImpact
+flow:hasOutcomeImpact rdf:type owl:AnnotationProperty ;
+    rdfs:label "hasOutcomeImpact"@en ;    # Human-readable label
+    rdfs:comment "Defines the Outcome impact as one of the five semantic stages of impact."@en ; # Description
+    rdfs:domain flow:TopicPair .
+
+
+###  http://example.org/flowmetrics#hasReachImpact
+flow:hasReachImpact rdf:type owl:AnnotationProperty ;
+    rdfs:label "hasReachImpact"@en ;    # Human-readable label
+    rdfs:comment "Defines the Reach impact as one of the five semantic stages of impact."@en ; # Description
+    rdfs:domain flow:TopicPair .
+
+
+###  http://example.org/flowmetrics#hasSharedConcept
+flow:hasSharedConcept rdf:type owl:AnnotationProperty ;
+    rdfs:label "hasSharedConcept"@en ;    # Human-readable label
+    rdfs:comment "The shared concept between two nodes. This is associted to the topic pair rather than the single individual node."@en ; # Description
+    rdfs:domain flow:TopicPair ;      
+    rdfs:range rdfs:Literal .  
+
+
+###  http://example.org/flowmetrics#hasTopic
+flow:hasTopic rdf:type owl:AnnotationProperty ;
+            rdfs:range flow:ResearchTopic ;
+            rdfs:domain flow:TopicPair ;
+            rdfs:label "hasTopic"@en ;    # Human-readable label
+            rdfs:comment "This relationship defines the topic nodes of an edge (topic pair)."@en . # Description
+
+
+###  http://example.org/flowmetrics#platform
+flow:platform rdf:type owl:AnnotationProperty ;
+    rdfs:label "platform"@en ;    # Human-readable label
+    rdfs:comment "The platform name providing the metric."@en ; # Description
+    rdfs:domain flow:TopicPair .
+
+
+###  http://example.org/flowmetrics#score
+flow:score rdf:type owl:AnnotationProperty ;
+    rdfs:label "score"@en ;    # Human-readable label
+    rdfs:comment "The score associated to a given platform."@en ; # Description
+    rdfs:domain flow:TopicPair .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/flowmetrics#Topic
+flow:ResearchTopic rdf:type owl:Class ;
+       owl:sameAs skos:Concept ;
+       owl:sameAs cso:Topic .
+
+###  http://example.org/flowmetrics#TopicPair
+flow:TopicPair rdf:type owl:Class ;
+        sh:property [                 
+            sh:path flow:hasTopic ;           # constrains the values of flow:hasTopic
+            sh:maxCount 2 ;
+            sh:minCount 2 ; 
+            sh:node flow:ResearchTopic 
+        ] .
+
